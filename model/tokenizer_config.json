@@ -1,0 +1,11 @@
+﻿{
+  "model_type": "bpe",
+  "language": "balochi",
+  "vocab_size": 2000,
+  "num_merges": 1845,
+  "bos_token": "<s>",
+  "eos_token": "</s>",
+  "unk_token": "<unk>",
+  "pad_token": "<pad>",
+  "mask_token": "<mask>"
+}
