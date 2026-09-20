@@ -2,8 +2,7 @@
 
 A subword tokenizer for the **Balochi** language, built with **Byte-Pair Encoding (BPE)** and trained from scratch on a Balochi word-list dataset.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-GITHUB-USERNAME/Balochi-Tokenizer/blob/main/balochi_tokenizer_colab.ipynb)
-<!-- Replace YOUR-GITHUB-USERNAME above with your real GitHub username after you upload the project. -->
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Emena-Barkat/Balochi-Tokenizer/blob/main/balochi_tokenizer_colab.ipynb)
 
 > **Status:** research project in progress. The accompanying research paper will be added to the `docs/` folder once it is finalized (see [Research paper](#research-paper)).
 
@@ -70,15 +69,13 @@ Balochi-Tokenizer/
 
 `results/` and `docs/` do not exist yet. They will be added when there are real results and a finished paper.
 
-[ADD: which script produced the files currently in `model/` — `tokenizer.py` writes three files, the PowerShell script writes all five.]
-
 ---
 
 ## Requirements
 
-- **Python 3** for `tokenizer.py`. No extra packages are needed (it only uses the standard library). [ADD: the Python version you tested with]
+- **Python 3** for `tokenizer.py`. No extra packages are needed (it only uses the standard library).
 - **Google account** if you want to use the Colab notebook.
-- **Windows PowerShell** if you want to use `balochi_tokenizer.ps1`. [ADD: the PowerShell version you tested with]
+- **Windows PowerShell** if you want to use `balochi_tokenizer.ps1`.
 
 ---
 
@@ -94,7 +91,7 @@ Train the tokenizer, save it to `model/`, and evaluate it on the test file:
 python tokenizer.py
 ```
 
-The script reads `data/train_dataset.txt` and `data/test_dataset.txt`, trains with `vocab_size=2000` and `min_frequency=2`, saves the files to `model/`, and prints an evaluation summary. [ADD: how long training takes on your computer, if you want to report it]
+The script reads `data/train_dataset.txt` and `data/test_dataset.txt`, trains with `vocab_size=2000` and `min_frequency=2`, saves the files to `model/`, and prints an evaluation summary.
 
 Use the tokenizer from your own Python code:
 
@@ -140,8 +137,6 @@ Available options (from the script's parameters):
 | `-MinFrequency` | `2` | Minimum pair frequency for a merge |
 | `-CustomText` | (empty) | Tokenize one piece of text and print tokens, IDs and the reconstructed text |
 
-[ADD: confirm you ran this script on Windows and note the PowerShell version.]
-
 ---
 
 ## Dataset
@@ -153,10 +148,9 @@ Available options (from the script's parameters):
 
 - Each line is one entry. Almost all entries are single words; a small number of lines contain more than one word.
 - The training text contains **150** distinct characters, which form the base alphabet of the tokenizer.
-- Source of the data: **[ADD DATASET SOURCE]**
-- Who collected/cleaned it, and how: **[ADD]**
-- Dataset license / permission to share: **[ADD]**
-- Language variety / script conventions covered: **[ADD]**
+- A small number of lines contain English (Latin-letter) words: 543 lines in the training file and 75 in the test file. They were not removed.
+- Source of the data (and who collected or prepared it): **[ADD DATASET SOURCE]**
+- Dataset license / permission to share: **[ADD DATASET PERMISSION]**
 
 ---
 
@@ -179,14 +173,14 @@ To reproduce these numbers, run `python tokenizer.py` and read the "Evaluation S
 
 **How to read these numbers:** the tokenizer can always fall back to single characters, and every character in the training data is in the vocabulary. So exact reconstruction is expected to be 100% unless the test text contains characters that never appeared in training. It shows that encoding followed by decoding gives back the original text. It does **not** measure how linguistically good the subword splits are.
 
-No comparison with other tokenizers and no downstream-task results are reported here yet. [ADD: any further experiments and where the result files are stored in `results/`]
+No comparison with other tokenizers and no downstream-task results are reported here yet.
 
 ---
 
 ## Notes and limitations
 
 - **Train/test overlap:** 3,013 of the 5,773 unique test entries (about 52%) also appear in the training file. Keep this in mind when interpreting the test results.
-- **Training data is word-list style:** the tokenizer was trained on mostly single-word lines. Behaviour on full sentences has not been evaluated here. [ADD: your own findings if you tested this]
+- **Training data is word-list style:** the tokenizer was trained on mostly single-word lines. Behaviour on full sentences has not been evaluated here.
 - **Known issues in `tokenizer.py` loading (`load()`):**
   - It cannot read files that start with a UTF-8 byte-order mark (BOM). The files currently in `model/` start with one, so `load("model")` fails with a `JSONDecodeError`.
   - Merge rules that contain the space character are skipped when loading, so 5 of the 1,845 rules are dropped. This only affects text that contains spaces.
@@ -198,9 +192,7 @@ No comparison with other tokenizers and no downstream-task results are reported 
 
 The research paper for this project is **not available yet**. It will be added to the `docs/` folder (for example `docs/research_paper.pdf`) once it is finalized.
 
-- Title: **[ADD PAPER TITLE]**
-- Status: **[ADD: in preparation / submitted / published]**
-- Link: **[ADD LINK, if any]**
+- Title, status and link: to be added.
 
 ---
 
@@ -208,13 +200,12 @@ The research paper for this project is **not available yet**. It will be added t
 
 - Rico Sennrich, Barry Haddow, and Alexandra Birch. 2016. *Neural Machine Translation of Rare Words with Subword Units.* In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL 2016). This is the paper that introduced BPE for subword segmentation in NLP.
 
-**How to cite this project:** [ADD citation text or BibTeX after the paper is available]
+**How to cite this project:** to be added after the paper is available.
 
 ---
 
 ## Author, license and contact
 
 - Author: **[ADD YOUR NAME]**
-- Institution / supervisor: **[ADD]**
-- Contact: **[ADD EMAIL OR LINK]**
-- Code license: **[ADD LICENSE, e.g. MIT — or state "All rights reserved" if you do not want to grant one]**
+- GitHub: [Emena-Barkat](https://github.com/Emena-Barkat)
+- Code license: not specified yet.
