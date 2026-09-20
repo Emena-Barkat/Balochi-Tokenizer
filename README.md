@@ -200,7 +200,7 @@ The research paper for this project is **not available yet**. It will be added t
 
 ## References
 
-- Rico Sennrich, Barry Haddow, and Alexandra Birch. 2016. *Neural Machine Translation of Rare Words with Subword Units.* In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL 2016). This is the paper that introduced BPE for subword segmentation in NLP.
+- - Rico Sennrich, Barry Haddow, and Alexandra Birch. 2016. *Neural Machine Translation of Rare Words with Subword Units.* In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL 2016), pages 1715–1725. This paper adapted the byte pair encoding compression algorithm for splitting words into subword units. https://aclanthology.org/P16-1162/
 
 **How to cite this project:** to be added after the paper is available.
 
