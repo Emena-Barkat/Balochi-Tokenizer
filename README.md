@@ -2,6 +2,8 @@
 
 A subword tokenizer for the **Balochi** language, built with **Byte-Pair Encoding (BPE)** and trained from scratch on a Balochi word-list dataset.
 
+Developed as an internship project at **Balochi Academy**. The datasets were provided by Balochi Academy.
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Emena-Barkat/Balochi-Tokenizer/blob/main/balochi_tokenizer_colab.ipynb)
 
 > **Status:** research project in progress. The accompanying research paper will be added to the `docs/` folder once it is finalized (see [Research paper](#research-paper)).
@@ -149,8 +151,8 @@ Available options (from the script's parameters):
 - Each line is one entry. Almost all entries are single words; a small number of lines contain more than one word.
 - The training text contains **150** distinct characters, which form the base alphabet of the tokenizer.
 - A small number of lines contain English (Latin-letter) words: 543 lines in the training file and 75 in the test file. They were not removed.
-- Source of the data (and who collected or prepared it): **[ADD DATASET SOURCE]**
-- Dataset license / permission to share: **[ADD DATASET PERMISSION]**
+- Source of the data: provided by Balochi Academy.
+- Dataset license / permission to share: to be confirmed with Balochi Academy.
 
 ---
 
@@ -206,6 +208,7 @@ The research paper for this project is **not available yet**. It will be added t
 
 ## Author, license and contact
 
-- Author: **[ADD YOUR NAME]**
+- Author: Emena Barkat
+- Developed as an internship project at Balochi Academy.
 - GitHub: [Emena-Barkat](https://github.com/Emena-Barkat)
 - Code license: not specified yet.
