@@ -1,0 +1,67 @@
+# ============================================================
+# .gitignore for Balochi-Tokenizer
+# Lines starting with # are comments. Each other line is a
+# pattern of files/folders that Git should NOT track.
+# ============================================================
+
+# --- Python: automatically generated cache files ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Jupyter / Google Colab notebooks ---
+.ipynb_checkpoints/
+# Folder Colab creates in a session (not part of your project)
+sample_data/
+
+# --- Virtual environments (local Python installs) ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Secrets and local settings (never publish these) ---
+.env
+*.env
+*.key
+*.pem
+
+# --- Editor and operating-system clutter ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# --- Temporary, backup and log files ---
+*.tmp
+*.temp
+*.bak
+*.swp
+*.log
+
+# --- Zip/archive copies of the project (e.g. Balochi_Tokeniser.zip) ---
+*.zip
+*.rar
+*.7z
+
+# --- Big training outputs (not used by this project today, but
+#     protects you from accidentally uploading them later) ---
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.h5
+*.safetensors
+
+# ------------------------------------------------------------
+# NOT ignored on purpose (these SHOULD be uploaded):
+#   model/  data/  results/  docs/  README.md  tokenizer.py
+#   balochi_tokenizer_colab.ipynb  balochi_tokenizer.ps1
+#
+# OPTIONAL: if you are NOT allowed to share the dataset publicly,
+# remove the "#" at the start of the next two lines:
+# data/train_dataset.txt
+# data/test_dataset.txt
+# ------------------------------------------------------------
